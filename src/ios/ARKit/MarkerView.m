@@ -50,34 +50,34 @@
         UIImageView *bgImageView = [[UIImageView alloc] initWithImage:_bgImage];
         [self addSubview:bgImageView];
         
-        CGSize labelSize = CGSizeMake(calloutSize.width - (LABEL_MARGIN * 2), LABEL_HEIGHT);
-        if(_allowsCallout){
-            labelSize.width -= disclosureImage.size.width + (DISCLOSURE_MARGIN * 2);
-        }
-        
-        UILabel *titleLabel	= [[UILabel alloc] initWithFrame:CGRectMake(LABEL_MARGIN, LABEL_MARGIN, labelSize.width, labelSize.height)];
-		[titleLabel setBackgroundColor: [UIColor clearColor]];
-		[titleLabel setTextColor:		[UIColor whiteColor]];
-		[titleLabel setTextAlignment:	NSTextAlignmentCenter];
-        [titleLabel setFont:            [UIFont fontWithName:@"Helvetica-Bold" size:17.0]];
-		[titleLabel setText:			[coordinate title]];
-        [self addSubview:titleLabel];
-        
-        NSLocale *locale = [NSLocale currentLocale];
-        _usesMetric = [[locale objectForKey:NSLocaleUsesMetricSystem] boolValue];
-
-        
-        _lblDistance = [[UILabel alloc] initWithFrame:CGRectMake(0, LABEL_HEIGHT + LABEL_MARGIN, labelSize.width, labelSize.height)];
-		[_lblDistance setBackgroundColor:    [UIColor clearColor]];
-		[_lblDistance setTextColor:          [UIColor whiteColor]];
-		[_lblDistance setTextAlignment:      NSTextAlignmentCenter];
-        [_lblDistance setFont:               [UIFont fontWithName:@"Helvetica" size:13.0]];
-		if(_usesMetric == YES){
-            [_lblDistance setText:[NSString stringWithFormat:@"%.2f km", [_coordinateInfo distanceFromOrigin]/1000.0f]];
-        } else {
-            [_lblDistance setText:[NSString stringWithFormat:@"%.2f mi", ([_coordinateInfo distanceFromOrigin]/1000.0f) * 0.621371]];
-        }
-        [self addSubview:_lblDistance];
+//        CGSize labelSize = CGSizeMake(calloutSize.width - (LABEL_MARGIN * 2), LABEL_HEIGHT);
+//        if(_allowsCallout){
+//            labelSize.width -= disclosureImage.size.width + (DISCLOSURE_MARGIN * 2);
+//        }
+//
+//        UILabel *titleLabel	= [[UILabel alloc] initWithFrame:CGRectMake(LABEL_MARGIN, LABEL_MARGIN, labelSize.width, labelSize.height)];
+//		[titleLabel setBackgroundColor: [UIColor clearColor]];
+//		[titleLabel setTextColor:		[UIColor whiteColor]];
+//		[titleLabel setTextAlignment:	NSTextAlignmentCenter];
+//        [titleLabel setFont:            [UIFont fontWithName:@"Helvetica-Bold" size:17.0]];
+//		[titleLabel setText:			[coordinate title]];
+//        [self addSubview:titleLabel];
+//
+//        NSLocale *locale = [NSLocale currentLocale];
+//        _usesMetric = [[locale objectForKey:NSLocaleUsesMetricSystem] boolValue];
+//
+//
+//        _lblDistance = [[UILabel alloc] initWithFrame:CGRectMake(0, LABEL_HEIGHT + LABEL_MARGIN, labelSize.width, labelSize.height)];
+//		[_lblDistance setBackgroundColor:    [UIColor clearColor]];
+//		[_lblDistance setTextColor:          [UIColor whiteColor]];
+//		[_lblDistance setTextAlignment:      NSTextAlignmentCenter];
+//        [_lblDistance setFont:               [UIFont fontWithName:@"Helvetica" size:13.0]];
+//		if(_usesMetric == YES){
+//            [_lblDistance setText:[NSString stringWithFormat:@"%.2f km", [_coordinateInfo distanceFromOrigin]/1000.0f]];
+//        } else {
+//            [_lblDistance setText:[NSString stringWithFormat:@"%.2f mi", ([_coordinateInfo distanceFromOrigin]/1000.0f) * 0.621371]];
+//        }
+//        [self addSubview:_lblDistance];
         
 		
         if(_allowsCallout){

@@ -32,7 +32,7 @@
     _scaleViewsBasedOnDistance      = YES;
     _minimumScaleFactor             = 0.5;
     _rotateViewsBasedOnPerspective  = YES;
-    _showsRadar                     = YES;
+    _showsRadar                     = NO;
     _showsCloseButton               = YES;
     _radarRange                     = 20.0;
     _onlyShowItemsWithinRadarRange  = NO;
@@ -52,7 +52,7 @@
 	if([[locations returnLocations] count] > 0){
 		for (ARGeoCoordinate *coordinate in [locations returnLocations]){
 			if (coordinate.displayView == nil){
-                MarkerView *cv = [[MarkerView alloc] initForCoordinate:coordinate withDelgate:self allowsCallout:YES];
+                MarkerView *cv = [[MarkerView alloc] initForCoordinate:coordinate withDelgate:self allowsCallout:NO];
                 [coordinate setDisplayView:cv];
             }
 			[_agController addCoordinate:coordinate];
@@ -111,7 +111,7 @@
 - (void)didTapMarker:(ARGeoCoordinate *)coordinate {
     NSLog(@"delegate worked click on %@", [coordinate title]);
     [delegate locationClicked:coordinate];
-    
+    [self closeButtonClicked];
 }
 
 - (void)didUpdateHeading:(CLHeading *)newHeading {
