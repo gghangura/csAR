@@ -111,7 +111,7 @@
 - (void)didTapMarker:(ARGeoCoordinate *)coordinate {
     NSLog(@"delegate worked click on %@", [coordinate title]);
     [delegate locationClicked:coordinate];
-    [self closeButtonClicked];
+    [self closeButtonClicked:self];
 }
 
 - (void)didUpdateHeading:(CLHeading *)newHeading {

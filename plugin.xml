@@ -56,6 +56,7 @@
         <resource-file src="src/ios/ARKit/Images/bgCallout@2x.png" />
         <resource-file src="src/ios/ARKit/Images/bgCalloutDisclosure.png" />
         <resource-file src="src/ios/ARKit/Images/bgCalloutDisclosure@2x.png" />
+        <resource-file src="src/ios/ARKit/Images/bglocationar.png" />
     </platform><!-- ios -->
 
 </plugin>

@@ -31,7 +31,7 @@
     _coordinateInfo = coordinate;
     _delegate       = aDelegate;
     _allowsCallout  = allowsCallout;
-    _bgImage        = [UIImage imageNamed:@"location.png"];
+    _bgImage        = [UIImage imageNamed:@"bglocationar.png"];
     
     UIImage *disclosureImage    = [UIImage imageNamed:@"bgCalloutDisclosure.png"];
     CGSize calloutSize          = _bgImage.size;
